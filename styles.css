@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  border: none;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #FCFCFC;
+}
+
+.main-header {
+  background-color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+  list-style-type: none
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #989ea6;
+  font-weight: bold;
+  transition: color 0.5s ease-in-out;
+}
+
+.navigation a:hover {
+  color: #00c7c4; /* Adjust hover color */
+}
+
+.current a {
+  color: #00c7c4;
+}
+
+.animated-link {
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden; /* Clip overflowing content */
+  text-decoration: none; /* Remove default underline */
+  display: inline-block; /* Allow applying inline styles */
+  padding: 5px 10px; /* Adjust padding if needed */
+  color: #00c7c4;
+}
+
+.animated-link:hover{
+  color: #00c7c4;
+}
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #00c7c4; 
+  transition: width 0.5s ease-in-out;
+}
+
+.animated-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #00c7c4;
+  transition: width 0.5s ease-in-out;
+}
+
+.animated-link:hover::after,
+.animated-link:hover::before {
+  width: calc(100% - 20px);
+}
+
+.content {
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 100px;
+}
+
+h4 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: rgb(0 199 196);
+  margin-bottom: 20px;
+}
+.content h2 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.contain{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: calc(100vw - 200px);
+}
+
+.card{
+  background-color: #fafafa;
+  border-radius: 20px;
+  width: 500px;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+.card i{
+  line-height: 42px;
+  background-color: white;
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  color: crimson;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.s{
+  display: flex;
+  padding: 10px;
+}
+
+.c{
+  font-weight: 700;
+  font-size: larger !important;
+}
+
+.n p{
+  margin-left: 10px;
+  display: block;
+  color: #989ea6;
+  font-size: small;
+}
+
+.hidden {
+  display: none; 
+}
+
+.show {
+  background-color: #00c7c4;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 15px 60px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  z-index: 1;
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  width: 10rem;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.show:hover {
+  background-color: black;
+}
+
+.foot {
+  margin-top: 1rem;
+  padding: 25px 350px;
+  background-image: url(./images/4.jpg);
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foot-top {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.soc {
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.t {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.soc ul {
+  position: relative;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.soc li {
+  margin-left: 0;
+  position: relative;
+  display: flex;
+  margin-right: 5px;
+}
+
+.soc li a {
+  position: relative;
+  display: block;
+  line-height: 42px;
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #2a3037;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.soc li a img{
+  margin-top: 10px;
+  height: 13px;
+  width: 13px;
+}
+
+.soc li a:hover {
+  text-decoration: none;
+  background-color: #00c7c4;
+}
+
+.lin {
+  text-align: left;
+}
+
+.lin u {
+  position: relative;
+}
+
+.lin li {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.lin a {
+  color: #989ea6;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.lin a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #00c7c4;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.lin a:hover::after {
+  width: 100%;
+  animation: border-anim 0.3s ease forwards;
+}
+
+@keyframes border-anim {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.lin a:not(:hover)::after {
+  animation: border-out 0.3s ease forwards;
+}
+
+@keyframes border-out {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.con {
+  position: relative;
+}
+
+.con ul {
+  position: relative;
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+.con ul li {
+  position: relative;
+  padding-left: 38px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #989ea6;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.con ul li i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 26px;
+  width: 20px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.con li:hover {
+  text-decoration: none;
+  color: #00c7c4;
+}
+
+.foot-bot {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  color: #989ea6;
+  line-height: 25px;
+  outline: none;
+}
